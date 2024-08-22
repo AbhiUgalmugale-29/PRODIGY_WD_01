@@ -91,6 +91,10 @@ nav .nav-bar {
   padding: 10px;
 }
 
+.nav-links li a:hover{
+  color: var(--search-text);
+}
+
 .nav-links li a::before {
   content: "";
   position: absolute;
