@@ -1,239 +1,297 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/*===== colours =====*/
+/*===== Colours =====*/
 :root {
-  --body-color: #e4e9f7;
-  --nav-color: #4070f4;
-  --side-nav: #010718;
-  --text-color: #fff;
-  --search-bar: #f2f2f2;
-  --search-text: #010718;
+    --body-color: #7fc6f2;
+    --nav-color: #4d88ff;
+    --side-nav: #010718;
+    --text-color: #fff;
+    --search-bar: #f2f2f2;
+    --search-text: white;
 }
 
 body {
-  height: 100vh;
-  background-color: var(--body-color);
+    height: 100vh;
+    background-color: var(--body-color);
 }
 
 body.dark {
-  --body-color: #18191a;
-  --nav-color: #242526;
-  --side-nav: #242526;
-  --text-color: #ccc;
-  --search-bar: #242526;
+    --body-color: #18191a;
+    --nav-color: #242526;
+    --text-color: #ccc;
+    --search-bar: #242526;
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
-  background-color: var(--nav-color);
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
 }
 
 nav .nav-bar .sidebarOpen {
-  color: var(--text-color);
-  font-size: 25px;
-  padding: 5px;
-  cursor: pointer;
-  display: none;
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
 }
 
 nav .nav-bar .logo a {
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--text-color);
-  text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .menu .logo-toggle {
-  display: none;
+    display: none;
 }
 
 nav .nav-bar {
-  position: relative;
-  height: 100%;
-  max-width: 1000px;
-  width: 100%;
-  background-color: var(--nav-color);
-  margin: 0 auto;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-bar .nav-links {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar .nav-links li {
-  margin: 0 5px;
-  list-style: none;
+    margin: 0 5px;
+    list-style: none;
 }
 
 .nav-links li a {
-  position: relative;
-  font-size: 17px;
-  font-weight: 400;
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 10px;
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
 }
 
-.nav-links li a:hover{
-  color: var(--search-text);
+.nav-links li a:hover {
+    color:#404040;
 }
 
 .nav-links li a::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(50%);
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  background-color: var(--text-color);
-  opacity: 0;
-  transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .nav-links li:hover a::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .nav-bar .darkLight-searchBox {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .darkLight-searchBox .dark-light,
 .darkLight-searchBox .searchToggle {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
 }
 
 .dark-light i,
 .searchToggle i {
-  position: absolute;
-  color: var(--text-color);
-  font-size: 22px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .dark-light i.sun {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .dark-light.active i.sun {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .dark-light.active i.moon {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .searchToggle i.cancel {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .searchToggle.active i.cancel {
-  opacity: 1;
-  pointer-events: none;
+    opacity: 1;
+    pointer-events: none;
 }
 
 .searchToggle.active i.search {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .searchBox {
-  position: relative;
+    position: relative;
 }
 
 .searchBox .search-field {
-  position: absolute;
-  bottom: -85px;
-  right: 5px;
-  height: 50px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  background-color: var(--nav-color);
-  padding: 3px;
-  border-radius: 6px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .searchToggle.active ~ .search-field {
-  bottom: -74px;
-  opacity: 1;
-  pointer-events: auto;
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .search-field::before {
-  content: "";
-  position: absolute;
-  right: 14px;
-  top: -4px;
-  height: 12px;
-  width: 12px;
-  background-color: var(--nav-color);
-  transform: rotate(-45deg);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
 }
 
 .search-field input {
-  height: 100%;
-  width: 100%;
-  padding: 0 45px 0 15px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--search-text);
-  background-color: var(--search-bar);
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
 }
 
 body.dark .search-field input {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 .search-field i {
-  position: absolute;
-  color: var(--nav-color);
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
 }
 
 body.dark .search-field i {
-  color: var(--text-color);
+    color: var(--text-color);
 }
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #404040;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #404040;
+}
+
+.btn {
+    background-color: #fff;
+    color: #404040;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #404040;
+    color: #fff;
+}
+
+.hero-image {
+    background-image: url('./img/photorealistic-view-tree-nature-with-branches-trunk.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 1200px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 790px) {
   nav .nav-bar .sidebarOpen {
     display: block;
@@ -282,5 +340,18 @@ body.dark .search-field i {
   .nav-links li a {
     display: block;
     margin-top: 20px;
+  }
+}
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-image {
+      width: 100%;
+      height: 340px;
+      margin: 20px auto 0; 
+      position: relative;
+      left: 0; 
   }
 }
