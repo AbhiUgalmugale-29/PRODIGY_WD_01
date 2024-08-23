@@ -347,6 +347,18 @@ body.dark .search-field i {
       text-align: center;
   }
 
+  .hero-content h1 {
+    color: #fff;
+}
+
+.hero-content h2 {
+    color: #fff;
+}
+
+.hero-content p {
+    color: #fff;
+}
+
   .hero-image {
       width: 100%;
       height: 340px;
@@ -354,4 +366,3 @@ body.dark .search-field i {
       position: relative;
       left: 0; 
   }
-}
